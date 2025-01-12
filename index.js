@@ -42,6 +42,7 @@ function handleletter() {
     // `this` refers to the button that was clicked
     var letter = this.innerHTML; // Get the innerHTML of the clicked button (the letter it represents)
     Playsound(letter); // Call the Playsound function with the letter
+      buttonanimation(letter);
 }
 
 
@@ -58,9 +59,20 @@ for (var i = 0; i < document.querySelectorAll(".drum").length; i++) {
 document.addEventListener("keydown", function(event) {
     // Pass the key that was pressed (event.key) to the Playsound function
     Playsound(event.key);
-    
+    buttonanimation(event.key);
     
 });
+
+function buttonanimation(currentkey){
+    var activebutton=document.querySelector("."+currentkey)
+
+    activebutton.classList.add("pressed")
+
+    setTimeout(function(){
+        activebutton.classList.remove("pressed")
+    },200)
+
+}
 
 
 
