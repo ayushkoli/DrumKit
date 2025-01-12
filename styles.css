@@ -137,7 +137,7 @@ footer {
 
 /* Pressed Effect */
 .pressed {
-  box-shadow: 0 0 20px 5px #ff004f, 0 0 30px 10px #ff004f;
+ box-shadow: 0 0 30px 10px #ff004f, 0 0 50px 20px #ff004f;
   opacity: 0.8;
 }
 
